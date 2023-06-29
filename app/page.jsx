@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-6 md:py-12 md:px-24">
 
       <div className="w-full border border-stone-400 rounded-lg">
 
