@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-around items-center p-8 shadow-md shadow-gray-700 sticky top-0 bg-[#1D232A]">
+    <div className="flex flex-col md:flex-row gap-4 justify-around items-center p-8 shadow-md shadow-gray-700 sticky top-0 bg-[#1D232A]">
       <Link href="/">
         <Image
           src="/minigptlogo.png"
