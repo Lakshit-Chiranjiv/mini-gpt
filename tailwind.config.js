@@ -12,6 +12,10 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      animation: {
+        'bounce-late-1': 'bounce 1s 0.8s infinite',
+        'bounce-late-2': 'bounce 1s 1.6s infinite',
+      }
     },
   },
   plugins: [require('daisyui')],
