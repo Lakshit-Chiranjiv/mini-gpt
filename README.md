@@ -14,6 +14,14 @@ Mini-GPT is a small chatbot that uses the GPT-3 API to generate responses to use
 ![DaisyUI](https://img.shields.io/badge/DaisyUI-FFB800?style=for-the-badge&logo=css3&logoColor=white) &nbsp;
 ![OpenAI](https://img.shields.io/badge/OpenAI-FF6600?style=for-the-badge&logo=openai&logoColor=white) &nbsp;
 
+### How it looks?
+
+#### Home
+![Home](public/home.png)
+
+#### Chat
+![Chat](public/chat.png)
+
 ### Installation and Usage
 1. Clone the repository
 ```bash
