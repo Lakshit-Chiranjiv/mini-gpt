@@ -1,8 +1,12 @@
 import Navbar from "./components/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Poppins } from "@next/font/google";
+ 
+const poppins = Poppins({
+  variable: "--display-poppins",
+  subsets: ["latin"],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
 
 export const metadata = {
   title: "Mini-GPT",
@@ -11,8 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={`${poppins.variable}`}>
+      <body>
         <Navbar />
         <main className="flex min-h-screen flex-col items-center justify-between p-6 md:py-12 md:px-24">
           {children}
