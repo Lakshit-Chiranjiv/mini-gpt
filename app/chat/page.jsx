@@ -11,6 +11,9 @@ const Chat = () => {
       <div className="chat chat-end">
         <div className="chat-bubble">Typing...</div>
       </div>
+      <button className="btn btn-accent btn-outline my-4 w-full">
+        Go to Home
+      </button>
     </MacWindow>
   );
 };
