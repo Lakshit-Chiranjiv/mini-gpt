@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    fontLoaders: [
+        { loader: "@next/font/google", options: { subset: ["latin"] }}
+    ]
+}
 
 module.exports = nextConfig
