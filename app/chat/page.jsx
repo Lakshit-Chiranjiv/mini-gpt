@@ -5,10 +5,14 @@ import Link from "next/link";
 const Chat = async({ searchParams }) => {
 
   const userInput = searchParams.userInput
-
-  const gptResponse = await fetchGPTResponse(userInput)
   let gptResponseText = "Typing..."
-  gptResponseText = gptResponse.choices[0]?.message.content
+  if(!userInput) {
+    gptResponseText = "There is no input."
+  }
+  else{
+    const gptResponse = await fetchGPTResponse(userInput)
+    gptResponseText = gptResponse.choices[0]?.message.content
+  }
 
   return (
     <MacWindow>
