@@ -1,19 +1,28 @@
 import MacWindow from "../components/MacWindow";
+import fetchGPTResponse from "../lib/fetchGPTResp";
+import Link from "next/link";
 
-const Chat = () => {
+const Chat = async({ searchParams }) => {
+
+  const userInput = searchParams.userInput
+
+  const gptResponse = await fetchGPTResponse(userInput)
+  let gptResponseText = "Typing..."
+  gptResponseText = gptResponse.choices[0]?.message.content
+
   return (
     <MacWindow>
       <div className="chat chat-start">
         <div className="chat-bubble">
-          It's over Anakin, <br />I have the high ground.
+          {userInput}
         </div>
       </div>
-      <div className="chat chat-end">
-        <div className="chat-bubble">Typing...</div>
+      <div className="chat chat-end mt-4">
+        <div className="chat-bubble">{gptResponseText}</div>
       </div>
-      <button className="btn btn-accent btn-outline my-4 w-full">
+      <Link className="btn btn-accent btn-outline my-4 w-full" href='/'>
         Go to Home
-      </button>
+      </Link>
     </MacWindow>
   );
 };
